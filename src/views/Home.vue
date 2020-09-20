@@ -1,18 +1,33 @@
-<template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+<template lang='pug'>
+#home
+  section01(:scroll='scroll')
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
 export default {
-  name: 'Home',
-  components: {
-    HelloWorld
+  data () {
+    return {
+      scroll: 0
+    }
+  },
+  methods: {
+    getScroll (event) {
+      const scrollValue = window.scrollY
+      this.scroll = scrollValue / 145
+      console.log(this.scroll)
+    }
+  },
+  computed: {
+  },
+  mounted () {
+    window.addEventListener('scroll', this.getScroll)
   }
 }
 </script>
+<style lang="stylus">
+
+.iframe{
+  border 0
+}
+
+</style>
