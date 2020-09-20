@@ -1,23 +1,23 @@
 <template lang='pug'>
 #home
+  my-menu(:scroll='scroll')
   section01(:scroll='scroll')
+  section02(:scroll='scroll')
 </template>
 
 <script>
 export default {
   data () {
     return {
-      scroll: 0
+      scroll: 0,
+      scrollBar: {}
     }
   },
   methods: {
     getScroll (event) {
       const scrollValue = window.scrollY
       this.scroll = scrollValue / 145
-      console.log(this.scroll)
     }
-  },
-  computed: {
   },
   mounted () {
     window.addEventListener('scroll', this.getScroll)
@@ -25,9 +25,4 @@ export default {
 }
 </script>
 <style lang="stylus">
-
-.iframe{
-  border 0
-}
-
 </style>

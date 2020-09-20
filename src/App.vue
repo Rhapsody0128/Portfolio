@@ -1,7 +1,8 @@
 <template lang="pug">
   #app
-    my-menu
-    router-view
+    #view
+      router-view
+    #scroll
 </template>
 <script>
 export default {
@@ -13,16 +14,28 @@ export default {
 html,*{
   padding 0
   margin 0
-  height 200rem
+  height 100%
+  font-family: 'Noto Sans TC', sans-serif;
 }
 #app{
   width 100%
-  height 100rem
-  position fixed
+  height 100%
+  position absolute
+  #view{
+    position fixed
+    width 100%
+    height 100rem
+  }
+  #scroll{
+    width 1px
+    height 1px
+    position absolute
+    top 1000rem
+  }
 }
 @media (max-width: 768px) {
-  #app{
-    height 70rem
-  }
+  // #app{
+  //   height 70rem
+  // }
 }
 </style>

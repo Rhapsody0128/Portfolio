@@ -22,7 +22,7 @@ export default {
     scroll: Number
   },
   watch: {
-    scroll (value) {
+    scroll (value, value2) {
       if (value > 10) {
         this.section01 = { display: 'none' }
       }
@@ -101,6 +101,7 @@ export default {
 </script>
 <style lang="stylus" scoped>
 #section01{
+  pointer-events none
   max-height 70%
   width 100%
   transition 0.5s
@@ -116,30 +117,29 @@ export default {
       width 100%
       text-align center
       height 70%
-      font-size 2rem
-      color rgb(0,50,105)
+      text-shadow 0rem 0rem 1rem rgba(0,0,0,0.8)
+      font-size 2.5rem
+      color white
     }
   }
 }
 @media (max-width: 768px) {
   #section01{
-  max-height 70%
-  width 100%
-  transition 0.5s
-  position absolute
-  background url('/images/pic (1).jpeg') no-repeat center/cover
-  #floatText{
-    transition 0.1s
-    position absolute
-    height 100rem
+    max-height 70%
     width 100%
-    top -340%
-    .text{
+    transition 0.5s
+    position absolute
+    background url('/images/pic (1).jpeg') no-repeat center/cover
+    #floatText{
+      position absolute
+      height 100rem
       width 100%
-      text-align center
-      height 70%
-      font-size 2.5rem
-      color rgb(0,50,105)
+      top -340%
+      .text{
+        width 100%
+        text-align center
+        height 70%
+        font-size 1.8rem
       }
     }
   }
