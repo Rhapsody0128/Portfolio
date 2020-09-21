@@ -106,25 +106,30 @@ export default {
             this.block02 = { left: `${120 - designValue * 6}%`, transform: `rotate(${designValue * 20}deg)` }
             this.backend = { opacity: '0' }
           }
-          if (designValue >= 11.34 && designValue < 15) {
+          if (designValue >= 11.34 && designValue <= 15) {
             this.design = { top: '3%', background: 'rgba(0,0,237,0.6)' }
             this.block01 = { top: '3%', opacity: '0' }
-            this.block02 = { left: `${120 - designValue * 8}%`, transform: `rotate(${designValue * 20}deg)` }
-            this.frontend = { left: `${(designValue - 11.34) * 10 - 100}%` }
+            this.block02 = { left: `${120 - designValue * 6}%`, transform: `rotate(${designValue * 20}deg)` }
+            this.frontend = { left: `${-90 + (designValue - 11.34) * 15}%`, transform: `rotate(${designValue * 20}deg)` }
             this.backend = { opacity: `${(designValue - 11) / 3.7}` }
           }
+          console.log(designValue)
           if (designValue >= 15) {
-            this.frontend = { left: `${(designValue - 11.34) * 10 - 70}%`, transform: `rotate(${designValue * 10}deg)` }
-            this.block02 = { left: `${120 - designValue * 5}%` }
-            this.backend = { opacity: '0' }
-            this.block03 = { top: `${-40 + (designValue - 15) * 5}% `, transform: `rotate(${designValue * 25}deg)`, borderRadius: `${designValue / 2}rem` }
+            this.frontend = { left: `${-90 + (designValue - 11.34) * 15}%`, transform: `rotate(${designValue * 20}deg)` }
+            this.block02 = { left: `${120 - designValue * 6}%`, transform: `rotate(${designValue * 20}deg)` }
+            this.backend = { opacity: `${1 - (designValue - 15) * 0.5}` }
+            this.block03 = { top: `${-44 + (designValue - 15) * 5}% `, transform: `rotate(${designValue * 25}deg)`, borderRadius: `${designValue / 2}rem` }
+            if (designValue >= 18) {
+              this.frontend = { left: '15%', transform: `rotate(${-(designValue - 18) * 158}deg)` }
+              this.block02 = { left: '15%', transform: `rotate(${-(designValue - 18) * 158}deg)`, opacity: `${1 - (designValue - 18) * 0.3}` }
+            }
             if (designValue >= 20) {
               this.frontend = { left: '15%', background: 'rgba(255,220,50,0.5)' }
               this.block02 = { display: 'none' }
             }
             if (designValue >= 28.77) {
-              this.backend = { opacity: '100', background: `rgba(${(designValue - 28) * 100},120,0,0.4)` }
-              this.block03 = { top: '30% ', borderRadius: '50%', opacity: `${30 - designValue}` }
+              this.backend = { opacity: `${(designValue - 28.7) * 0.8}`, background: `rgba(${(designValue - 28) * 100},120,0,0.4)` }
+              this.block03 = { top: '25% ', borderRadius: '50%', opacity: `${30 - designValue}` }
             }
           }
           designValue > 12 ? this.texts[0] = { opacity: '100%' } : this.texts[0] = { opacity: 0 }
@@ -237,20 +242,20 @@ export default {
     }
     #frontend{
       background rgba(0,255,120,0.5)
-      top 17%
+      top 14%
       left -120rem
     }
     #block02{
       background rgba(255,0,0,0.3)
       left 120%
-      top 15%
+      top 14%
       z-index 1
       backdrop-filter: hue-rotate(270deg)
     }
     #backend{
       background rgba(255,120,0,0.4)
       left 40%
-      top 30%
+      top 25%
       opacity 0
       backdrop-filter: hue-rotate(120deg)
     }
@@ -266,9 +271,9 @@ export default {
     #section02{ transition 0s}
     #skill{
       .block{
-        width 14.5rem
-        height 14.5rem
-        transition 0.1s
+        width 12rem
+        height 12rem
+        transition 0s
         .title{
           transition 0s
           font-size 1.8rem
@@ -288,11 +293,10 @@ export default {
       transition 0s
       font-size 2.5rem
     }
-    .text{
+      .text{
       transition 0s
       font-size 1.3rem
-
-    }
+      }
     }
   }
 }
