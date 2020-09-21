@@ -29,14 +29,14 @@ export default {
       if (value > 8 && value <= 10) {
         this.section01 = {
           opacity: '0',
-          backgroundImage: "url('/images/pic (4).jpeg')"
+          backgroundImage: "url('./images/pic (4).jpeg')"
         }
         this.text04 = {
           opacity: '0'
         }
       }
       if (value > 6 && value <= 8) {
-        this.section01 = { backgroundImage: "url('/images/pic (4).jpeg')" }
+        this.section01 = { backgroundImage: "url('./images/pic (4).jpeg')" }
         this.text01 = {
           opacity: '0'
         }
@@ -50,7 +50,7 @@ export default {
           opacity: '100%'
         }
       } else if (value > 4 && value <= 6) {
-        this.section01 = { backgroundImage: "url('/images/pic (3).jpeg')" }
+        this.section01 = { backgroundImage: "url('./images/pic (3).jpeg')" }
         this.text01 = {
           opacity: '0'
         }
@@ -64,7 +64,7 @@ export default {
           opacity: '0'
         }
       } else if (value > 2 && value <= 4) {
-        this.section01 = { backgroundImage: "url('/images/pic (2).jpeg')" }
+        this.section01 = { backgroundImage: "url('./images/pic (2).jpeg')" }
         this.text01 = {
           opacity: '0'
         }
@@ -78,7 +78,7 @@ export default {
           opacity: '0'
         }
       } else if (value >= 0 && value <= 2) {
-        this.section01 = { backgroundImage: "url('/images/pic (1).jpeg')" }
+        this.section01 = { backgroundImage: "url('./images/pic (1).jpeg')" }
         this.text01 = {
           opacity: '100%'
         }
@@ -106,7 +106,7 @@ export default {
   width 100%
   transition 0.5s
   position absolute
-  background url('/images/pic (1).jpeg') no-repeat center/cover
+  background no-repeat center/cover
   #floatText{
     transition 0.1s
     position absolute
@@ -129,7 +129,7 @@ export default {
     width 100%
     transition 0.5s
     position absolute
-    background url('/images/pic (1).jpeg') no-repeat center/cover
+    background no-repeat center/cover
     #floatText{
       position absolute
       height 100rem
