@@ -16,6 +16,7 @@ html,*{
   margin 0
   height 100%
   font-family: 'Noto Sans TC', sans-serif;
+  box-sizing: border-box;
 }
 #app{
   width 100%
@@ -30,12 +31,7 @@ html,*{
     width 1px
     height 1px
     position absolute
-    top 1000rem
+    top 1100rem
   }
-}
-@media (max-width: 768px) {
-  // #app{
-  //   height 70rem
-  // }
 }
 </style>

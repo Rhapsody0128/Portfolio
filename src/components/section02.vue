@@ -3,9 +3,10 @@
     #profile(:style='profile')
       span.title(:style="title") 關於我
       span.text(:style="text01") 畢業於國立台東大學應用物理系
-      span.text(:style="text02") 有近一年的前端網頁設計和開發的經驗
-      span.text(:style="text03") 喜歡找出問題癥結點並處理
-      span.text(:style="text04") 目前正在前端網頁這條路上邁進中
+      span.text(:style="text02") 曾參與專訓網路前端課程
+      span.text(:style="text03") 有近一年前端網頁設計和開發經驗
+      span.text(:style="text04") 喜歡找出問題癥結點並處理
+      span.text(:style="text05") 目前正在前端網頁這條路上邁進中
     #skill(:style='skill')
       #design.block(:style="design")
         span.title(:style="texts[0]") 視覺設計
@@ -42,6 +43,7 @@ export default {
       text02: {},
       text03: {},
       text04: {},
+      text05: {},
       skill: {},
       design: {},
       frontend: {},
@@ -63,11 +65,12 @@ export default {
         this.section02 = { display: 'flex' }
         if (value > 2 && value < 18) {
           this.profile = { opacity: `${value * 30}` + '%' }
-          value > 4 ? this.title = { opacity: `${value * 20}` + '%' } : this.title = { opacity: 0 }
-          value > 5 ? this.text01 = { opacity: `${value * 20}` + '%' } : this.text01 = { opacity: 0 }
-          value > 6 ? this.text02 = { opacity: `${value * 20}` + '%' } : this.text02 = { opacity: 0 }
-          value > 7 ? this.text03 = { opacity: `${value * 20}` + '%' } : this.text03 = { opacity: 0 }
-          value > 8 ? this.text04 = { opacity: `${value * 20}` + '%' } : this.text04 = { opacity: 0 }
+          value > 2 ? this.title = { opacity: `${value * 20}` + '%' } : this.title = { opacity: 0 }
+          value > 4 ? this.text01 = { opacity: `${value * 20}` + '%' } : this.text01 = { opacity: 0 }
+          value > 5 ? this.text02 = { opacity: `${value * 20}` + '%' } : this.text02 = { opacity: 0 }
+          value > 6 ? this.text03 = { opacity: `${value * 20}` + '%' } : this.text03 = { opacity: 0 }
+          value > 7 ? this.text04 = { opacity: `${value * 20}` + '%' } : this.text04 = { opacity: 0 }
+          value > 8 ? this.text05 = { opacity: `${value * 20}` + '%' } : this.text05 = { opacity: 0 }
           if (value >= 9) {
             let profileValue = value - 9
             if (value >= 12) {
@@ -94,7 +97,6 @@ export default {
         }
         // 技能總覽
         if (value >= 18 && value < 54) {
-          console.log(value)
           const designValue = value - 18
           this.profile = { display: 'none' }
           this.skill = { display: 'flex' }
@@ -158,18 +160,19 @@ export default {
 <style lang="stylus" scoped>
 #section02{
   display none
-  transition 0.3s
+  transition 0.1s
   width 100%
   height 100%
+  flex-wrap wrap
   position absolute
   #profile{
     opacity 0
     transition 0.1s
-    background rgba(255,200,120,0.5)
+    background rgba(255,230,150,0.5)
     border-radius 1rem
     height 50rem
     width 40rem
-    margin  5% auto
+    margin 5% auto
     display flex
     justify-content center
     flex-wrap wrap
@@ -210,12 +213,16 @@ export default {
         width 100%
         opacity 0
         margin-top 0.5rem
+        color white
+        text-shadow 0 0 0.5rem black
       }
       .text{
         transition 0.5s
         font-size 1.2rem
         width 50%
         opacity 0
+        color white
+        text-shadow 0 0 0.5rem black
         height 0rem
       }
     }
@@ -261,6 +268,12 @@ export default {
         width 15rem
         height 15rem
       }
+    }
+    #profile{
+      height 43rem
+      width 40rem
+      margin 3%
+      padding 1%
     }
   }
 }

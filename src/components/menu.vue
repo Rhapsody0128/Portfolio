@@ -1,12 +1,9 @@
 <template lang="pug">
   #menu(:style="menu")
     .col
-      .title.item 首頁
-      .title.item 簡介
-      .title.item 作品
-      .product.item CardGame
-      .product.item CardGame
-      .product.item CardGame
+      .title.item(@click="To('a')") 首頁
+      .title.item(@click="To('b')") 簡介
+      .title.item(@click="To('c')") 作品集
 </template>
 <script>
 export default {
@@ -17,6 +14,21 @@ export default {
   },
   props: {
     scroll: Number
+  },
+  methods: {
+    To (value) {
+      switch (value) {
+        case 'a':
+          window.scrollTo(0, 0)
+          break
+        case 'b':
+          window.scrollTo(0, 1400)
+          break
+        case 'c':
+          window.scrollTo(0, 10000)
+          break
+      }
+    }
   },
   watch: {
     scroll (value, value2) {

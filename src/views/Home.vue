@@ -3,6 +3,7 @@
   my-menu(:scroll='scroll')
   section01(:scroll='scroll')
   section02(:scroll='scroll')
+  section03(:scroll='scroll')
 </template>
 
 <script>
@@ -17,6 +18,11 @@ export default {
     getScroll (event) {
       const scrollValue = window.scrollY
       this.scroll = scrollValue / 145
+    }
+  },
+  watch: {
+    scroll (value) {
+      console.log(value)
     }
   },
   mounted () {
