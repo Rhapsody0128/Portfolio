@@ -125,12 +125,9 @@ export default {
 }
 @media (max-width: 768px) {
   #section01{
-    max-height 70%
-    width 100%
-    transition 0.5s
-    position absolute
-    background no-repeat center/cover
+    transition 0s
     #floatText{
+      transition 0s
       position absolute
       height 100rem
       width 100%

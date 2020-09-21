@@ -3,10 +3,10 @@
     #profile(:style='profile')
       span.title(:style="title") 關於我
       span.text(:style="text01") 畢業於國立台東大學應用物理系
-      span.text(:style="text02") 曾參與專訓網路前端課程
-      span.text(:style="text03") 有近一年前端網頁設計和開發經驗
+      span.text(:style="text02") 參與網頁前端設計課程踏入這行
+      span.text(:style="text03") 近一年前端網頁設計開發經驗
       span.text(:style="text04") 喜歡找出問題癥結點並處理
-      span.text(:style="text05") 目前正在前端網頁這條路上邁進中
+      span.text(:style="text05") 正在前端網頁這條路上邁進中
     #skill(:style='skill')
       #design.block(:style="design")
         span.title(:style="texts[0]") 視覺設計
@@ -78,7 +78,7 @@ export default {
             }
             this.profile = {
               transform: `rotate(-${(profileValue) * 2}deg) scale(${1 - profileValue * 0.08}) skew(${profileValue * 8}deg)`,
-              boxShadow: `-${profileValue}rem ${profileValue}rem ${profileValue}rem black`,
+              boxShadow: '-0.3rem 0.3rem 0.3rem black',
               opacity: 1
             }
           }
@@ -87,7 +87,7 @@ export default {
             const profileValue2 = value - 13
             this.profile = {
               transform: `rotate(-${(profileValue) * 2}deg) scale(${1 - profileValue * 0.06}) skew(${profileValue * 8}deg)`,
-              boxShadow: `-${profileValue}rem ${profileValue}rem ${profileValue}rem black`,
+              boxShadow: '-0.3rem 0.3rem 0.3rem black',
               opacity: `${100 - profileValue2 * 20}%`,
               margin: `${profileValue2 * 20}% auto`
             }
@@ -110,7 +110,7 @@ export default {
             this.design = { top: '3%', background: 'rgba(0,0,237,0.6)' }
             this.block01 = { top: '3%', opacity: '0' }
             this.block02 = { left: `${120 - designValue * 8}%`, transform: `rotate(${designValue * 20}deg)` }
-            this.frontend = { left: `${(designValue - 11.34) * 10 - 70}%` }
+            this.frontend = { left: `${(designValue - 11.34) * 10 - 100}%` }
             this.backend = { opacity: `${(designValue - 11) / 3.7}` }
           }
           if (designValue >= 15) {
@@ -179,7 +179,7 @@ export default {
     text-align center
     .title{
       transition 0.5s
-      font-size 2.5rem
+      font-size 3rem
       height 0.1rem
       width 100%
       margin-top 1rem
@@ -188,7 +188,7 @@ export default {
     .text{
       transition 0.5s
       opacity 0
-      font-size 1.5rem
+      font-size 2rem
       width 100%
       height 0rem
     }
@@ -208,7 +208,7 @@ export default {
       text-align center
       .title{
         transition 0.5s
-        font-size 2rem
+        font-size 2.5rem
         height 0.1rem
         width 100%
         opacity 0
@@ -218,7 +218,7 @@ export default {
       }
       .text{
         transition 0.5s
-        font-size 1.2rem
+        font-size 1.5rem
         width 50%
         opacity 0
         color white
@@ -238,7 +238,7 @@ export default {
     #frontend{
       background rgba(0,255,120,0.5)
       top 17%
-      left -100rem
+      left -120rem
     }
     #block02{
       background rgba(255,0,0,0.3)
@@ -263,10 +263,19 @@ export default {
     }
   }
   @media (max-width: 768px) {
+    #section02{ transition 0s}
     #skill{
       .block{
-        width 15rem
-        height 15rem
+        width 14.5rem
+        height 14.5rem
+        transition 0.1s
+        .title{
+          transition 0s
+          font-size 1.8rem
+        }
+        .text{
+          font-size 1rem
+        }
       }
     }
     #profile{
@@ -274,6 +283,16 @@ export default {
       width 40rem
       margin 3%
       padding 1%
+      transition 0s
+      .title{
+      transition 0s
+      font-size 2.5rem
+    }
+    .text{
+      transition 0s
+      font-size 1.3rem
+
+    }
     }
   }
 }

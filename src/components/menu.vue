@@ -22,7 +22,7 @@ export default {
           window.scrollTo(0, 0)
           break
         case 'b':
-          window.scrollTo(0, 1400)
+          window.scrollTo(0, 1300)
           break
         case 'c':
           window.scrollTo(0, 10000)
@@ -75,6 +75,7 @@ export default {
     .title{
       width 100%
       font-size 2.2rem
+      cursor pointer
     }
     .product{
       width 100%

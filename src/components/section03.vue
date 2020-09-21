@@ -1,7 +1,7 @@
 <template lang="pug">
   #section03(:style="section03" )
     .portfolio(v-for="(data,index) in datas" :key="index")
-      product.product(:data="data" @back="back($event)" :index='index' :style="getProduct(index)")
+      product.product(v-if='toggle[index]' :data="data" @back="back($event)" :index='index' :style="getProduct(index)")
       .card(@click="pick(index)" :style="[getCard(index),getCardPosition(index)]")
         span.title {{data.title}}
         span.text {{data.description}}
@@ -41,7 +41,7 @@ export default {
         },
         {
           title: 'Just practice',
-          description: 'FB_sdk/People API/Gmail API/Youtube API/Vue.js',
+          description: 'FB SDK/People API/Gmail API/Youtube API/Vue.js',
           src: 'https://rhapsody0128.github.io/Just_practice/',
           littlePic: './images/partice.jpg'
         },
@@ -84,7 +84,8 @@ export default {
       ],
       card: [],
       cardPosition: [],
-      product: []
+      product: [],
+      toggle: []
     }
   },
   props: {
@@ -92,11 +93,13 @@ export default {
   },
   methods: {
     pick (index) {
+      this.toggle[index] = true
       this.card[index] = { transform: 'scale(5)', opacity: '0', pointerEvents: 'none' }
       this.product[index] = { opacity: '100%', pointerEvents: 'auto' }
       this.$forceUpdate()
     },
     back (index) {
+      this.toggle[index] = false
       this.product[index] = {}
       this.card[index] = {}
       this.$forceUpdate()
@@ -183,6 +186,8 @@ export default {
       }
       .pic{
         overflow hidden
+        width 100%
+        height 100%
         img{
           transition 0.5s
           transform scale(1)
@@ -208,8 +213,10 @@ export default {
     #section03{
       .portfolio{
         .card{
+          transition 0s
           width 10rem
-          height 20rem
+          height 15rem
+          opacity 0.8
           .title{
             height 3rem
             width 100%
@@ -220,7 +227,15 @@ export default {
             height 3rem
             font-size 0.8rem
           }
+          .pic{
+            img{
+              transition 0s
+            }
+          }
         }
+      }
+      .product{
+      transition 0s
       }
     }
   }

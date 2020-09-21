@@ -55,6 +55,7 @@ export default {
       border 3px black solid
       border-radius 3rem
       box-shadow 0.5rem 0.5rem 0.3rem black
+      overflow hidden
     }
     .text{
       width 100%
@@ -68,6 +69,7 @@ export default {
       border-radius 50%
       right 1%
       transition 1s
+      cursor pointer
       &:hover{
         transform rotate(180deg)
       }
@@ -111,6 +113,20 @@ export default {
       .text{
         width 100%
         height 4rem
+      }
+      .icon{
+        width 3rem
+        height 3rem
+        transition 1s
+        &:hover{
+          transform rotate(180deg)
+        }
+      }
+      .icon::before{
+        width 2rem
+      }
+      .icon::after{
+        width 2rem
       }
     }
   }

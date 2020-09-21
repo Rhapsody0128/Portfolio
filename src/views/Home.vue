@@ -30,8 +30,6 @@ export default {
   },
   watch: {
     scroll (value) {
-      console.log(value)
-
       if (value >= 8 && value < 10) {
         this.title = '簡介'
         this.bigtitle = { opacity: '100%' }
@@ -92,6 +90,9 @@ export default {
   }
 }
 @media (max-width: 768px) {
+  .bigtitle{
+      top 15%
+    }
   .footer{
     .text{
       font-size 1rem
