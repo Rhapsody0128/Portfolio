@@ -100,7 +100,6 @@ export default {
           const designValue = value - 18
           this.profile = { display: 'none' }
           this.skill = { display: 'flex' }
-          console.log(designValue)
           if (designValue <= 10.88) {
             this.design = { top: `${121 - designValue * 10.88}%`, background: `rgba(${255 - designValue * 23},0,237,0.3` }
             this.block01 = { top: `${81 - designValue * 7.2}%`, background: `rgba(0,${255 - designValue * 23},237,0.3)` }
@@ -114,7 +113,6 @@ export default {
             this.frontend = { left: `${-90 + (designValue - 11.34) * 15}%`, transform: `rotate(${designValue * 20}deg)` }
             this.backend = { opacity: `${(designValue - 11) / 3.7}` }
           }
-          console.log(designValue)
           if (designValue >= 15) {
             this.frontend = { left: `${-90 + (designValue - 11.34) * 15}%`, transform: `rotate(${designValue * 20}deg)` }
             this.block02 = { left: `${120 - designValue * 6}%`, transform: `rotate(${designValue * 20}deg)` }

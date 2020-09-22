@@ -62,7 +62,7 @@ export default {
   right 0%
   display flex
   &:hover{
-    background rgba(225,222,222,0.3)
+    background rgba(225,222,222,0.8)
     height 100%
   }
   .col{
@@ -103,7 +103,7 @@ export default {
   top  0%
   display flex
   &:hover{
-    background rgba(225,222,222,0.3)
+    background rgba(225,222,222,0.8)
     height 4%
   }
   .col{
@@ -127,9 +127,9 @@ export default {
       color white
       height 0
       transition 0.5s
-      text-shadow 0.3rem 0.3rem 0.3rem black
+      text-shadow 0.1rem 0.1rem 0.1rem black
       &:hover{
-        text-shadow 0.5rem 0.5rem 0.1rem black
+        text-shadow 0.2rem 0.2rem 0.2rem black
         padding 0 0.3rem 0rem 0.3rem
       }
     }

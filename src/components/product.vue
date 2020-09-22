@@ -43,12 +43,6 @@ export default {
     border 10px black double
     border-radius 1.5rem
     padding 1rem
-    // .block{
-    //   background red
-    //   position absolute
-    //   width 100%
-    //   height 100%
-    // }
     .title{
       height 3rem
       width 100%
@@ -58,6 +52,7 @@ export default {
       width 100%
       height 100%
       border-radius 1.5rem
+      border 0
       box-shadow 0.5rem 0.5rem 0.3rem black
       overflow hidden
     }
@@ -107,6 +102,9 @@ export default {
         height 3rem
         width 100%
         font-size 2rem
+      }
+      .iframe{
+        border 0
       }
       .text{
         width 100%
