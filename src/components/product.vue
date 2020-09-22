@@ -57,7 +57,6 @@ export default {
     .iframe{
       width 100%
       height 100%
-      border 0
       border-radius 1.5rem
       box-shadow 0.5rem 0.5rem 0.3rem black
       overflow hidden
@@ -108,12 +107,6 @@ export default {
         height 3rem
         width 100%
         font-size 2rem
-      }
-      .iframe{
-        width 100%
-        height 100%
-        border 0
-        border 3px black solid
       }
       .text{
         width 100%
