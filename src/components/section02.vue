@@ -100,15 +100,16 @@ export default {
           const designValue = value - 18
           this.profile = { display: 'none' }
           this.skill = { display: 'flex' }
-          if (designValue <= 11.34) {
-            this.design = { top: `${120 - designValue * 10.88}%`, background: `rgba(${255 - designValue * 23},0,237,0.3` }
-            this.block01 = { top: `${80 - designValue * 7.2}%`, background: `rgba(0,${255 - designValue * 23},237,0.3)` }
+          console.log(designValue)
+          if (designValue <= 10.88) {
+            this.design = { top: `${121 - designValue * 10.88}%`, background: `rgba(${255 - designValue * 23},0,237,0.3` }
+            this.block01 = { top: `${81 - designValue * 7.2}%`, background: `rgba(0,${255 - designValue * 23},237,0.3)` }
             this.block02 = { left: `${120 - designValue * 6}%`, transform: `rotate(${designValue * 20}deg)` }
             this.backend = { opacity: '0' }
           }
-          if (designValue >= 11.34 && designValue <= 15) {
-            this.design = { top: '3%', background: 'rgba(0,0,237,0.6)' }
-            this.block01 = { top: '3%', opacity: '0' }
+          if (designValue >= 10.88 && designValue <= 15) {
+            this.design = { top: '2%', background: 'rgba(0,0,237,0.6)' }
+            this.block01 = { top: '2%', opacity: '0' }
             this.block02 = { left: `${120 - designValue * 6}%`, transform: `rotate(${designValue * 20}deg)` }
             this.frontend = { left: `${-90 + (designValue - 11.34) * 15}%`, transform: `rotate(${designValue * 20}deg)` }
             this.backend = { opacity: `${(designValue - 11) / 3.7}` }
@@ -118,7 +119,7 @@ export default {
             this.frontend = { left: `${-90 + (designValue - 11.34) * 15}%`, transform: `rotate(${designValue * 20}deg)` }
             this.block02 = { left: `${120 - designValue * 6}%`, transform: `rotate(${designValue * 20}deg)` }
             this.backend = { opacity: `${1 - (designValue - 15) * 0.5}` }
-            this.block03 = { top: `${-44 + (designValue - 15) * 5}% `, transform: `rotate(${designValue * 25}deg)`, borderRadius: `${designValue / 2}rem` }
+            this.block03 = { top: `${-44 + (designValue - 15) * 5}% `, transform: `rotate(${designValue * 25}deg)`, borderRadius: `${(designValue - 15) * 3}%` }
             if (designValue >= 18) {
               this.frontend = { left: '15%', transform: `rotate(${-(designValue - 18) * 158}deg)` }
               this.block02 = { left: '15%', transform: `rotate(${-(designValue - 18) * 158}deg)`, opacity: `${1 - (designValue - 18) * 0.3}` }
