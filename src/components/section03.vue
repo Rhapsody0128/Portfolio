@@ -113,9 +113,9 @@ export default {
     getProduct (index) {
       return this.product[index]
     },
-    cardFlow (index, start, end, speed, left) {
+    cardFlow (index, start, end, speed, top) {
       const value = end - start
-      this.cardPosition[index] = { top: `${80 - value * speed}%`, left: `${left}%` }
+      this.cardPosition[index] = { left: `${105 - value * speed}%`, top: `${top}%` }
     }
   },
   watch: {
@@ -123,17 +123,17 @@ export default {
       value = value - 65
       if (value > 0) {
         this.section03 = { display: 'flex' }
-        value > 6 && value < 14 ? this.cardFlow(0, 6, value, 8, 2) : value > 19 ? this.cardFlow(0, 11, value, 8, 2) : value < 6 ? this.cardFlow(0, 0, 0, 0, 0) : this.cardFlow(0, 6, 14, 8, 2)
-        value > 8 ? this.cardFlow(10, 8, value, 7, 30) : this.cardFlow(10, 0, 0, 0, 0)
-        value > 9 ? this.cardFlow(9, 9, value, 9, 58) : this.cardFlow(9, 0, 0, 0, 0)
-        value > 13 ? this.cardFlow(8, 13, value, 8, 58) : this.cardFlow(8, 0, 0, 0, 0)
-        value > 15 && value < 23 ? this.cardFlow(1, 15, value, 8, 30) : value > 28 ? this.cardFlow(1, 20, value, 8, 30) : value < 15 ? this.cardFlow(1, 0, 0, 0, 0) : this.cardFlow(1, 15, 23, 8, 30)
-        value > 16 ? this.cardFlow(7, 16, value, 6, 2) : this.cardFlow(7, 0, 0, 0, 0)
-        value > 19 ? this.cardFlow(6, 19, value, 9, 58) : this.cardFlow(6, 0, 0, 0, 0)
-        value > 23 && value < 31 ? this.cardFlow(2, 23, value, 8, 58) : value > 36 ? this.cardFlow(2, 28, value, 8, 58) : value < 23 ? this.cardFlow(2, 0, 0, 0, 0) : this.cardFlow(2, 23, 31, 8, 58)
-        value > 24 ? this.cardFlow(5, 24, value, 6, 30) : this.cardFlow(5, 0, 0, 0, 0)
-        value > 26 ? this.cardFlow(4, 26, value, 8, 2) : this.cardFlow(4, 0, 0, 0, 0)
-        value > 29 ? this.cardFlow(3, 30, value, 8, 2) : this.cardFlow(3, 0, 0, 0, 0)
+        value > 6 && value < 14 ? this.cardFlow(0, 6, value, 8, 1) : value > 19 ? this.cardFlow(0, 11, value, 8, 1) : value < 6 ? this.cardFlow(0, 0, 0, 0, 0) : this.cardFlow(0, 6, 14, 8, 1)
+        value > 8 ? this.cardFlow(10, 8, value, 7, 12.1) : this.cardFlow(10, 0, 0, 0, 0)
+        value > 9 ? this.cardFlow(9, 9, value, 9, 24.2) : this.cardFlow(9, 0, 0, 0, 0)
+        value > 13 ? this.cardFlow(8, 13, value, 8, 24.2) : this.cardFlow(8, 0, 0, 0, 0)
+        value > 15 && value < 23 ? this.cardFlow(1, 15, value, 8, 12.1) : value > 28 ? this.cardFlow(1, 20, value, 8, 12.1) : value < 15 ? this.cardFlow(1, 0, 0, 0, 0) : this.cardFlow(1, 15, 23, 8, 12.1)
+        value > 16 ? this.cardFlow(7, 16, value, 7, 1) : this.cardFlow(7, 0, 0, 0, 0)
+        value > 19 ? this.cardFlow(6, 19, value, 9, 24.2) : this.cardFlow(6, 0, 0, 0, 0)
+        value > 23 && value < 31 ? this.cardFlow(2, 23, value, 8, 24.2) : value > 36 ? this.cardFlow(2, 28, value, 8, 24.2) : value < 23 ? this.cardFlow(2, 0, 0, 0, 0) : this.cardFlow(2, 23, 31, 8, 24.2)
+        value > 24 ? this.cardFlow(5, 24, value, 6, 12.1) : this.cardFlow(5, 0, 0, 0, 0)
+        value > 26 ? this.cardFlow(4, 26, value, 9, 1) : this.cardFlow(4, 0, 0, 0, 0)
+        value > 31 ? this.cardFlow(3, 31, value, 8, 1) : this.cardFlow(3, 0, 0, 0, 0)
       } else {
         this.section03 = {}
       }
@@ -167,8 +167,10 @@ export default {
       box-shadow 0.3rem 0.3rem 0.3rem black
       background white
       border 3px black solid
-      top 70%
+      left 100%
+      opacity 0.6
       &:hover{
+        opacity 1
         .pic{
           img{
             transform scale(1.3)
@@ -214,9 +216,9 @@ export default {
       .portfolio{
         .card{
           transition 0s
-          width 10rem
-          height 15rem
-          opacity 0.8
+          width 13rem
+          height 13rem
+          opacity 0.7
           .title{
             height 3rem
             width 100%
