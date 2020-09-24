@@ -171,6 +171,7 @@ export default {
       opacity 0.6
       &:hover{
         opacity 1
+        z-index 1
         .pic{
           img{
             transform scale(1.3)
