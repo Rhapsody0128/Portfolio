@@ -97,7 +97,7 @@ export default {
           title: 'DiceGame',
           description: 'JAVA/AWT/Swing',
           src: 'https://github.com/Rhapsody0128/Dice_Game',
-          littlePic: './images/JAVA_DiceGame.gif'
+          littlePic: './images/Java_DiceGame.gif'
         }
       ],
       card: [],
