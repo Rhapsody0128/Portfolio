@@ -80,6 +80,24 @@ export default {
           description: 'CSS/Bootstrap/RWD',
           src: 'https://rhapsody0128.github.io/Front_end_web_development/0520%20bootstrap_component_I/layout.html',
           littlePic: './images/layout.jpg'
+        },
+        {
+          title: 'AI_MazeGame',
+          description: 'Python/AI/PyGame',
+          src: 'https://github.com/Rhapsody0128/python_AI_mazeGame',
+          littlePic: './images/python_mazeAI(7).gif'
+        },
+        {
+          title: 'NewsSpider',
+          description: 'Python/requests/BeautifulSoup',
+          src: 'https://github.com/Rhapsody0128/newsSpider',
+          littlePic: './images/python_newsSpider.gif'
+        },
+        {
+          title: 'DiceGame',
+          description: 'Java/AWT/Swing',
+          src: 'https://github.com/Rhapsody0128/Dice_Game',
+          littlePic: './images/JAVA_DiceGame.gif'
         }
       ],
       card: [],
@@ -134,6 +152,9 @@ export default {
         value > 24 ? this.cardFlow(5, 24, value, 6, 12.1) : this.cardFlow(5, 0, 0, 0, 0)
         value > 26 ? this.cardFlow(4, 26, value, 9, 1) : this.cardFlow(4, 0, 0, 0, 0)
         value > 31 ? this.cardFlow(3, 31, value, 8, 1) : this.cardFlow(3, 0, 0, 0, 0)
+        value > 33 ? this.cardFlow(11, 33, value, 7, 12.1) : this.cardFlow(11, 0, 0, 0, 0)
+        value > 35 ? this.cardFlow(12, 35, value, 8, 24.2) : this.cardFlow(12, 0, 0, 0, 0)
+        value > 38 ? this.cardFlow(13, 38, value, 9, 1) : this.cardFlow(13, 0, 0, 0, 0)
       } else {
         this.section03 = {}
       }
@@ -153,6 +174,7 @@ export default {
   position relative
   .portfolio{
     .card{
+      cursor pointer
       transition 0.1s
       display flex
       justify-content start
@@ -220,6 +242,7 @@ export default {
           width 13rem
           height 13rem
           opacity 0.7
+          cursor pointer
           .title{
             height 3rem
             width 100%

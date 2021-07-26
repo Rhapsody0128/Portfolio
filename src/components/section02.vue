@@ -4,9 +4,10 @@
       span.title(:style="title") 關於我
       span.text(:style="text01") 畢業於國立台東大學應用物理系
       span.text(:style="text02") 參與網頁前端設計課程踏入這行
-      span.text(:style="text03") 近一年前端網頁設計開發經驗
+      span.text(:style="text03") 近二年前端網頁設計開發經驗
       span.text(:style="text04") 喜歡找出問題癥結點並處理
-      span.text(:style="text05") 正在前端網頁這條路上邁進中
+      span.text(:style="text05") 也因興趣在空檔學習各種語言
+      span.text(:style="text06") 正在程式/網頁這條路上邁進中
     #skill(:style='skill')
       #design.block(:style="design")
         span.title(:style="texts[0]") 視覺設計
@@ -28,6 +29,12 @@
         span.text(:style="texts[14]") Node.js
         span.text(:style="texts[15]") MongoDB
         span.text(:style="texts[16]") RESTful API
+      #learning.block(:style="learning")
+        span.title(:style="texts[17]") 自學語言
+        span.text(:style="texts[18]") TypeScript
+        span.text(:style="texts[19]") JAVA
+        span.text(:style="texts[20]") Python
+        span.text(:style="texts[21]") WordPress
       #block01.block(:style="block01")
       #block02.block(:style="block02")
       #block03.block(:style="block03")
@@ -44,9 +51,11 @@ export default {
       text03: {},
       text04: {},
       text05: {},
+      text06: {},
       skill: {},
       design: {},
       frontend: {},
+      learning: {},
       backend: {},
       block01: {},
       block02: {},
@@ -71,6 +80,7 @@ export default {
           value > 6 ? this.text03 = { opacity: `${value * 20}` + '%' } : this.text03 = { opacity: 0 }
           value > 7 ? this.text04 = { opacity: `${value * 20}` + '%' } : this.text04 = { opacity: 0 }
           value > 8 ? this.text05 = { opacity: `${value * 20}` + '%' } : this.text05 = { opacity: 0 }
+          value > 9 ? this.text06 = { opacity: `${value * 20}` + '%' } : this.text06 = { opacity: 0 }
           if (value >= 9) {
             let profileValue = value - 9
             if (value >= 12) {
@@ -112,8 +122,10 @@ export default {
             this.block02 = { left: `${120 - designValue * 6}%`, transform: `rotate(${designValue * 20}deg)` }
             this.frontend = { left: `${-90 + (designValue - 11.34) * 15}%`, transform: `rotate(${designValue * 20}deg)` }
             this.backend = { opacity: `${(designValue - 11) / 3.7}` }
+            this.learning = { opacity: `${(designValue - 18) / 3.7}` }
           }
           if (designValue >= 15) {
+            this.learning = { opacity: `${(designValue - 20) / 3.7}` }
             this.frontend = { left: `${-90 + (designValue - 11.34) * 15}%`, transform: `rotate(${designValue * 20}deg)` }
             this.block02 = { left: `${120 - designValue * 6}%`, transform: `rotate(${designValue * 20}deg)` }
             this.backend = { opacity: `${1 - (designValue - 15) * 0.5}` }
@@ -148,6 +160,11 @@ export default {
           designValue > 32 ? this.texts[14] = { opacity: '100%' } : this.texts[14] = { opacity: 0 }
           designValue > 33 ? this.texts[15] = { opacity: '100%' } : this.texts[15] = { opacity: 0 }
           designValue > 34 ? this.texts[16] = { opacity: '100%' } : this.texts[16] = { opacity: 0 }
+          designValue > 20 ? this.texts[17] = { opacity: '100%' } : this.texts[17] = { opacity: 0 }
+          designValue > 23 ? this.texts[18] = { opacity: '100%' } : this.texts[18] = { opacity: 0 }
+          designValue > 26 ? this.texts[19] = { opacity: '100%' } : this.texts[19] = { opacity: 0 }
+          designValue > 29 ? this.texts[20] = { opacity: '100%' } : this.texts[20] = { opacity: 0 }
+          designValue > 32 ? this.texts[21] = { opacity: '100%' } : this.texts[21] = { opacity: 0 }
         }
         if (value > 54 && value < 60) {
           this.section02 = { top: `${-(value - 54) * 20}%`, display: 'flex' }
@@ -265,10 +282,23 @@ export default {
       backdrop-filter: hue-rotate(90deg)
       z-index 2
     }
+    #learning{
+      background rgba(50,200,10,0.4)
+      right 7%
+      top 27%
+      opacity 0
+      z-index 3
+      backdrop-filter: hue-rotate(60deg)
+    }
   }
   @media (max-width: 768px) {
     #section02{ transition 0s}
     #skill{
+      margin-top 1rem
+      #learning{
+        top 33%
+        right 45%
+      }
       .block{
         width 12rem
         height 12rem

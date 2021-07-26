@@ -39,7 +39,7 @@ export default {
       } else if (value > 65 && value < 70) {
         this.title = '作品集'
         this.bigtitle = { opacity: '100%' }
-      } else if (value > 110) {
+      } else if (value > 120) {
         this.title = '謝謝觀賞'
         this.bigtitle = { opacity: '100%' }
         this.footer = { opacity: '100%', height: '7%' }
