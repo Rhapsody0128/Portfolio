@@ -4,7 +4,10 @@
       .icon(@click="back(index)")
       span.title {{data.title}}
       span.text {{data.description}}
-      iframe.iframe(:src='data.src')
+      a.text(:href='data.src') 點我去github
+      .iframe(v-if="IsGitHub(data.src)")
+        img(:src='data.littlePic')
+      iframe.iframe(:src='data.src' v-else)
 </template>
 <script>
 export default {
@@ -20,6 +23,9 @@ export default {
   methods: {
     back (index) {
       this.$emit('back', index)
+    },
+    IsGitHub (src) {
+      return src.includes('https://github.com/')
     }
   }
 }
