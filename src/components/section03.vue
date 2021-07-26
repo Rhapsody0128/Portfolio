@@ -84,19 +84,19 @@ export default {
         {
           title: 'AI_MazeGame',
           description: 'Python/AI/PyGame',
-          src: 'https://www.youtube.com/',
+          src: 'https://github.com/Rhapsody0128/python_AI_mazeGame',
           littlePic: './images/python_mazeAI(7).gif'
         },
         {
           title: 'NewsSpider',
           description: 'Python/requests/BeautifulSoup',
-          src: 'https://www.youtube.com/',
+          src: 'https://github.com/Rhapsody0128/newsSpider',
           littlePic: './images/python_newsSpider.gif'
         },
         {
           title: 'DiceGame',
           description: 'JAVA/AWT/Swing',
-          src: 'https://www.youtube.com/',
+          src: 'https://github.com/Rhapsody0128/Dice_Game',
           littlePic: './images/JAVA_DiceGame.gif'
         }
       ],
