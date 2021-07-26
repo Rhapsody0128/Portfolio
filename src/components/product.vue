@@ -4,7 +4,7 @@
       .icon(@click="back(index)")
       span.title {{data.title}}
       span.text {{data.description}}
-      a.text(:href='data.src') 點我去github
+      a.text(:href='data.src') 點我去網站
       .iframe(v-if="IsGitHub(data.src)")
         img(:src='data.littlePic')
       iframe.iframe(:src='data.src' v-else)
