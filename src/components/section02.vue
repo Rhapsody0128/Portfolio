@@ -10,10 +10,10 @@
       span.text(:style="text06") 正在程式/網頁這條路上邁進中
     #skill(:style='skill')
       #design.block(:style="design")
-        span.title(:style="texts[0]") 視覺設計
-        span.text(:style="texts[1]") Photoshop
-        span.text(:style="texts[2]") Illustrator
-        span.text(:style="texts[3]") Figma
+        span.title(:style="texts[0]") 學習中語言
+        span.text(:style="texts[1]") TypeScript
+        span.text(:style="texts[2]") JAVA
+        span.text(:style="texts[3]") Python
       #frontend.block(:style="frontend")
         span.title(:style="texts[4]") 前端開發
         span.text(:style="texts[5]") HTML
@@ -21,7 +21,7 @@
         span.text(:style="texts[7]") JavaScript
         span.text(:style="texts[8]") Sass
         span.text(:style="texts[9]") Bootstrap
-        span.text(:style="texts[10]") Stylas
+        span.text(:style="texts[10]") Stylus
         span.text(:style="texts[11]") Vue.js
         span.text(:style="texts[12]") jQuery
       #backend.block(:style="backend")
@@ -29,12 +29,6 @@
         span.text(:style="texts[14]") Node.js
         span.text(:style="texts[15]") MongoDB
         span.text(:style="texts[16]") RESTful API
-      #learning.block(:style="learning")
-        span.title(:style="texts[17]") 自學語言
-        span.text(:style="texts[18]") TypeScript
-        span.text(:style="texts[19]") JAVA
-        span.text(:style="texts[20]") Python
-        span.text(:style="texts[21]") WordPress
       #block01.block(:style="block01")
       #block02.block(:style="block02")
       #block03.block(:style="block03")
@@ -160,11 +154,6 @@ export default {
           designValue > 32 ? this.texts[14] = { opacity: '100%' } : this.texts[14] = { opacity: 0 }
           designValue > 33 ? this.texts[15] = { opacity: '100%' } : this.texts[15] = { opacity: 0 }
           designValue > 34 ? this.texts[16] = { opacity: '100%' } : this.texts[16] = { opacity: 0 }
-          designValue > 20 ? this.texts[17] = { opacity: '100%' } : this.texts[17] = { opacity: 0 }
-          designValue > 23 ? this.texts[18] = { opacity: '100%' } : this.texts[18] = { opacity: 0 }
-          designValue > 26 ? this.texts[19] = { opacity: '100%' } : this.texts[19] = { opacity: 0 }
-          designValue > 29 ? this.texts[20] = { opacity: '100%' } : this.texts[20] = { opacity: 0 }
-          designValue > 32 ? this.texts[21] = { opacity: '100%' } : this.texts[21] = { opacity: 0 }
         }
         if (value > 54 && value < 60) {
           this.section02 = { top: `${-(value - 54) * 20}%`, display: 'flex' }
