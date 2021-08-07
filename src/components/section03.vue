@@ -40,10 +40,10 @@ export default {
           littlePic: './images/zenGarden.jpg'
         },
         {
-          title: 'Just practice',
-          description: 'FB SDK/People API/Gmail API/Youtube API/Vue.js',
-          src: 'https://rhapsody0128.github.io/Just_practice/',
-          littlePic: './images/partice.jpg'
+          title: 'YoutubeViewer',
+          description: 'People API/Youtube API/Vue.js/iView',
+          src: 'https://rhapsody0128.github.io/YoutubeViewer/',
+          littlePic: './images/youtubeViewer.png'
         },
         {
           title: 'Meme Cat',

@@ -8,7 +8,7 @@
     .footer(:style='footer')
       a.text(href="https://github.com/Rhapsody0128") GitHub
       a.text(href="https://www.cakeresume.com/s--qzuy_7x1N5rA11p9TaK3rA--/rhapsody0128") CakeResume
-      a.text.copyright Copyright© 2020 賴曜谷 All rights reserved
+      a.text.copyright Copyright© 2020 Rhapsody0128 All rights reserved
 </template>
 
 <script>
