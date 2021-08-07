@@ -1,7 +1,7 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ee22d528928cbc3df196",
-    "url": "css/app.00b56a81.css"
+    "revision": "700415e36f7c3663b3f4",
+    "url": "css/app.43a8d8a9.css"
   },
   {
     "revision": "3d6fae9082e67815df65630e999f1845",
@@ -76,16 +76,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "images/python_newsSpider.gif"
   },
   {
+    "revision": "06b65a83bec0d1ec16e69228e1f96611",
+    "url": "images/youtubeViewer.png"
+  },
+  {
     "revision": "21cb8176864e2f12815aed98756c3aa8",
     "url": "images/zenGarden.jpg"
   },
   {
-    "revision": "89ab5a273fa1cab9f792d833c642b140",
+    "revision": "93d575e05effbb6c066b7b9f09eb10ac",
     "url": "index.html"
   },
   {
-    "revision": "ee22d528928cbc3df196",
-    "url": "js/app.644ac2c6.js"
+    "revision": "700415e36f7c3663b3f4",
+    "url": "js/app.20825e16.js"
   },
   {
     "revision": "766a6bbc5bddcaf58f7a",
