@@ -9,7 +9,7 @@
       span.text(:style="text05") 也因興趣在空檔學習各種語言
       span.text(:style="text06") 正在程式/網頁這條路上邁進中
     #skill(:style='skill')
-      #design.block(:style="design")
+      #learning.block(:style="learning")
         span.title(:style="texts[0]") 學習中語言
         span.text(:style="texts[1]") TypeScript
         span.text(:style="texts[2]") JAVA
@@ -47,7 +47,7 @@ export default {
       text05: {},
       text06: {},
       skill: {},
-      design: {},
+      learning: {},
       frontend: {},
       learning: {},
       backend: {},
@@ -236,14 +236,14 @@ export default {
         height 0rem
       }
     }
-    #design{
-      right  5%
-      top 3%
+    #learning{
+      right 12%
+      top 5%
       z-index 1
       background rgba(0,0,237,0.2)
     }
     #block01{
-      right  5%
+      right  12%
     }
     #frontend{
       background rgba(0,255,120,0.5)
