@@ -1,7 +1,7 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f4e0bdba2d670d79224a",
-    "url": "css/app.43a8d8a9.css"
+    "revision": "0b52b2138363e13d0d1e",
+    "url": "css/app.8f2a356d.css"
   },
   {
     "revision": "3d6fae9082e67815df65630e999f1845",
@@ -76,6 +76,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "images/python_newsSpider.gif"
   },
   {
+    "revision": "e75751b4cf55ad53e94f04b4c1743442",
+    "url": "images/ultraviolet_rays_viewer.jpeg"
+  },
+  {
     "revision": "06b65a83bec0d1ec16e69228e1f96611",
     "url": "images/youtubeViewer.png"
   },
@@ -84,12 +88,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "images/zenGarden.jpg"
   },
   {
-    "revision": "ee613af722a99c9fe9b7d9f03eaec3ec",
+    "revision": "c5bb769c676545f923c5159bd5d8577c",
     "url": "index.html"
   },
   {
-    "revision": "f4e0bdba2d670d79224a",
-    "url": "js/app.add231c1.js"
+    "revision": "0b52b2138363e13d0d1e",
+    "url": "js/app.d455c96d.js"
   },
   {
     "revision": "766a6bbc5bddcaf58f7a",
