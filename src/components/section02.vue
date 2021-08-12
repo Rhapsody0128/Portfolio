@@ -49,7 +49,6 @@ export default {
       skill: {},
       learning: {},
       frontend: {},
-      learning: {},
       backend: {},
       block01: {},
       block02: {},
