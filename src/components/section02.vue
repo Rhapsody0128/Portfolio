@@ -238,8 +238,9 @@ export default {
     #learning{
       right 12%
       top 5%
-      z-index 1
       background rgba(0,0,237,0.2)
+      z-index 3
+      backdrop-filter: hue-rotate(60deg)
     }
     #block01{
       right  12%
@@ -270,22 +271,14 @@ export default {
       backdrop-filter: hue-rotate(90deg)
       z-index 2
     }
-    #learning{
-      background rgba(50,200,10,0.4)
-      right 7%
-      top 27%
-      opacity 0
-      z-index 3
-      backdrop-filter: hue-rotate(60deg)
-    }
   }
   @media (max-width: 768px) {
     #section02{ transition 0s}
     #skill{
       margin-top 1rem
       #learning{
-        top 33%
-        right 45%
+        top 3%
+        right 2%
       }
       .block{
         width 12rem
